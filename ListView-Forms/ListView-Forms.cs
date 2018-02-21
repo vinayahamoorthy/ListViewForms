@@ -1,5 +1,7 @@
 ﻿using System;
-
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 
 namespace ListViewForms
@@ -35,11 +37,15 @@ namespace ListViewForms
         }
         async void OnButtonClicked(object sender, EventArgs e)
         {
+            Analytics.TrackEvent("Home Page");
             await Current.MainPage.Navigation.PushAsync(new ListHugeRecords());
+           // throw new NotImplementedException();
         }
         protected override void OnStart()
         {
             // Handle when your app starts
+
+            AppCenter.Start("ios=fb6a1462-bfb5-4383-b56f-13d3e8a26419;" + "uwp={Your UWP App secret here};" + "android={Your Android App secret here}", typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()
