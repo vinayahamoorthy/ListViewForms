@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ListViewForms.ListHugeRecords">
+	<ListView x:Name="listView" ItemsSource="{Binding listView}"
+              CachingStrategy="RecycleElement"
+              RowHeight="150">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Margin="8">
+                       
+                        <Label Text="{Binding Company}"
+                               FontAttributes="Bold" />
+                        <Label Text="{Binding About}" FontSize="12" />
+                        <Label Text="{Binding Greeting}" TextColor="Gray" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>
