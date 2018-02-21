@@ -12,7 +12,7 @@
                         <Label Text="{Binding Company}"
                                FontAttributes="Bold" />
                         <Label Text="{Binding About}" FontSize="12" />
-                        <Label Text="{Binding Greeting}" TextColor="Gray" />
+                        <Label Text="{Binding Greeting}" TextColor="Silver" />
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
